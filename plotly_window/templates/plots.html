@@ -1,0 +1,34 @@
+<html>
+ <head>
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("fig");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+  </script>
+</head>
+<body>
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  {% for fig_name in fig_names %}
+  <div class="fig">
+  <h4>{{ fig_name | replace("figs/", "") | replace(".html", "") }}</h4>
+  {% include fig_name %}
+  </div>
+  {% endfor %}
+</body>
+</html>
