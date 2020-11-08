@@ -1,19 +1,18 @@
 import asyncio
 import json
-import time
+import os
 from pathlib import Path
 
 import websockets
 import logging
 
 logger = logging.getLogger(__name__)
-#logger.setLevel(logging.INFO)
+logger.setLevel(logging.INFO)
 ch = logging.StreamHandler()
 logger.addHandler(ch)
 
 logger.info('Starting server')
-
-DATA_DIR = Path('/tmp/plotly')
+DATA_DIR = Path(os.environ.get('PLOTLY_FIG_DIR', '/tmp/plotly'))
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 client_files = set()
