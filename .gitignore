@@ -141,3 +141,4 @@ cython_debug/
 plotly_figs/
 legacy/
 tmp/
+ipython_launcher.sh
