@@ -7,7 +7,7 @@ import websockets
 import logging
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.WARNING)
 ch = logging.StreamHandler()
 logger.addHandler(ch)
 
