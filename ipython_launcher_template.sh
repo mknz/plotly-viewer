@@ -1,5 +1,4 @@
 #!/bin/bash
-VIEWER_DIR=$HOME/dev/plotly-viewer
 
 # Save current window id
 CURRENT_WINDOW=$(wmctrl -l | head -1 | cut -d ' ' -f 1)
