@@ -16,6 +16,8 @@ sleep 0.5
 wmctrl -i -a $CURRENT_WINDOW
 
 ipython -i
+
+# Cleanup
 SERVER_PIDS=$(ps aux|grep python|grep server.py|awk '{print $2}')
 kill -KILL $SERVER_PIDS &> /dev/null
 kill -KILL $VIEWER_PID &> /dev/null
