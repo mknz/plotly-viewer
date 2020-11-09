@@ -15,7 +15,7 @@ This installs `ipv` command and `savefig` IPython startup function.
 ipv
 ```
 
-This command launches IPython with Plotly viewer and server.
+The command launches IPython with Plotly viewer and server.
 You can save Plotly figure by passing it to `savefig` function.
 
 ```Python
