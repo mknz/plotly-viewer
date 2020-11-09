@@ -11,7 +11,7 @@ chromium-browser --app=file://$VIEWER_DIR/client.html --window-size="800,600" &>
 VIEWER_PID=$!
 
 # Restore windowfocus
-sleep 0.5
+sleep 0.7
 wmctrl -i -a $CURRENT_WINDOW
 
 ipython -i
