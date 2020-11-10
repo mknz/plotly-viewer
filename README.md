@@ -8,11 +8,11 @@ cd ./plotly-viewer
 sudo make install
 ```
 
-This installs `ipv` command and `savefig` IPython startup function.
+This installs `ipython-plotly-viewer` command and `savefig` in IPython startup function.
 
 ```bash
 
-ipv
+ipython-plotly-viewer
 ```
 
 The command launches IPython with Plotly viewer and server.
